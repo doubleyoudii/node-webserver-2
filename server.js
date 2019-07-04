@@ -32,6 +32,10 @@ app.get('/', (req, res) => {
 
 app.use(express.static(__dirname + '/public'))
 
+app.get('/projects', (req, res) => {
+  res.render('project.hbs');
+});
+
 app.get('/bad', (req, res) => {
   res.send(
     {
